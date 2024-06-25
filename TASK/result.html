@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        border: 2px solid black;
+    }
+</style>
+
+<body>
+    <form action="" onsubmit="return mainn()">
+        <h1>
+            <center>D.A.V International school Kamlighat (Deogarh) pin-313331, contact-9521160064</center>
+        </h1>
+        <center>
+            <table border="1">
+                <tr>
+                    <th>
+                        ENTER YOUR NAME:<input type="text" oninput="main1()" id="one">
+                    </th>
+                    <th>
+                        YOUR FATHER NAME:<input type="text" oninput="main2()" id="two">
+                    </th>
+                    <th>
+                        YOUR MOTHER NAME:<input type="text" oninput="main3()" id="three">
+                    </th>
+                    <th>
+                        CLASS:<input type="text" oninput="main4()" id="four">
+
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th>STUDENT DETAILS:</tH>
+                    <td>SUBJECT</td>
+                    <td>SESSIONAL (40)</td>
+                    <td>THOERY(60)</td>
+                    <td> TOTEL</td>
+                </tr>
+                <tr>
+                    <th id="name"></th>
+                    <td>ENGLISH</td>
+                    <td> <input type="number" id="input-1" min="0" max="40" oninput="abc()" required></td>
+                    <td> <input type="number" id="input-2" min="0" max="60" oninput="abc()" required></td>
+                    <td id="tot1"> </td>
+                </tr>
+
+                <tr>
+                    <th id="fname"></th>
+                    <td>HINDI</td>
+                    <td> <input type="number" id="input-3" min="0" max="40" oninput="abc()" required></td>
+                    <td> <input type="number" id="input-4" min="0" max="60" oninput="abc()" required></td>
+                    <td id="tot2"></td>
+                </tr>
+
+                <tr>
+                    <th id="mname"></th>
+                    <td>MATHS</td>
+                    <td> <input type="number" id="input-5" min="0" max="40" oninput="abc()" required></td>
+                    <td> <input type="number" id="input-6" min="0" max="60" oninput="abc()" required></td>
+                    <td id="tot3"> </td>
+                </tr>
+
+                <tr>
+                    <th id="class"></th>
+                    <td>SCIENCE</td>
+                    <td> <input type="number" id="input-7" min="0" max="2" oninput="abc()" required></td>
+                    <td> <input type="number" id="input-8" min="0" max="2" oninput="abc()" required></td>
+                    <td id="tot4"> </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>HISTORY</td>
+                    <td> <input type="number" id="input-9" min="0" max="2" oninput="abc()" required></td>
+                    <td> <input type="number" id="input-10" min="0" max="2" oninput="abc()" required></td>
+                    <td id="tot5"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>SANSKRIT</td>
+                    <td> <input type="number" id="input-11" min="0" max="2" oninput="abc()" required></td>
+                    <td> <input type="number" id="input-12" min="0" max="2" oninput="abc()" required></td>
+                    <td id="tot6"></td>
+                </tr>
+
+                <tr>
+                    <th colspan="4">TOTAL</th>
+                    <TD> <span id="total"></span> /600</TD>
+                </tr>
+                <tr>
+                    <th colspan="2">RESULT</th>
+                    <th id="pass" colspan="2"></th>
+                    <TD>
+                        <SPAN id="result"></SPAN> %
+                    </TD>
+                </tr>
+
+                <tr>
+                    <td><input type="submit" onclick="main()"></td>
+                </tr>
+            </table>
+
+            <button onclick="print()"> print </button>
+    </form>
+    </DIV>
+
+    </center>
+    <script>
+
+        function main1() {
+            let ab = document.getElementById("one").value;
+            document.getElementById("name").innerHTML = ab;
+
+        }
+        function main2() {
+            let bc = document.getElementById("two").value;
+            document.getElementById("fname").innerHTML = bc;
+
+        }
+
+        function main3() {
+            let cd = document.getElementById("three").value;
+            document.getElementById("mname").innerHTML = cd;
+
+        }
+        function main4() {
+            let de = document.getElementById("four").value;
+            document.getElementById("class").innerHTML = de;
+
+        }
+
+
+
+        function abc() {
+            let a = document.getElementById("input-1").value;
+            let b = document.getElementById("input-2").value;
+            let tot1 = Number(a) + Number(b)
+
+            let c = document.getElementById("input-3").value;
+            let d = document.getElementById("input-4").value;
+            let tot2 = Number(c) + Number(d)
+
+
+            let e = document.getElementById("input-5").value;
+            let f = document.getElementById("input-6").value;
+            let tot3 = Number(e) + Number(f)
+
+            let g = document.getElementById("input-7").value;
+            let h = document.getElementById("input-8").value;
+            let tot4 = Number(g) + Number(h)
+
+            let i = document.getElementById("input-9").value;
+            let j = document.getElementById("input-10").value;
+            let tot5 = Number(i) + Number(j)
+
+            let k = document.getElementById("input-11").value;
+            let l = document.getElementById("input-12").value;
+            let tot6 = Number(k) + Number(l)
+
+
+            let subtot1 = document.getElementById("tot1").innerHTML = tot1;
+            let subtot2 = document.getElementById("tot2").innerHTML = tot2;
+            let subtot3 = document.getElementById("tot3").innerHTML = tot3;
+            let subtot4 = document.getElementById("tot4").innerHTML = tot4;
+            let subtot5 = document.getElementById("tot5").innerHTML = tot5;
+            let subtot6 = document.getElementById("tot6").innerHTML = tot6;
+
+            let finaltotal = document.getElementById("total").innerHTML = subtot1 + subtot2 + subtot3 + subtot4 + subtot5 + subtot6;
+
+
+            let result = document.getElementById("result").innerHTML = finaltotal / 600 * 100;
+
+            var pre;
+            pre = (finaltotal / 600) * 100;
+            document.getElementById('pass').innerHTML = "Total Marks" + total;
+            if (pre >= 33) {
+                document.getElementById("pass").innerHTML = "pass"
+                document.getElementById("pass").style.backgroundColor = "green"
+
+
+            }
+            else if (pre >= 50) {
+                document.getElementById("pass").innerHTML = "PASS+C"
+
+            }
+
+            else if (pre >= 60) {
+                document.getElementById("pass").innerHTML = "PASS+B"
+
+            }
+            else if (pre >= 75) {
+                document.getElementById("pass").innerHTML = "PASS+A"
+            }
+
+            else if (pre >= 90) {
+                document.getElementById("pass").innerHTML = "PASS+A+"
+            }
+
+            else {
+                document.getElementById("pass").innerHTML = "fail"
+                document.getElementById("pass").style.backgroundColor = "red"
+
+            }
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
